@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "kubeclustertest-c8cf"
+    labels:
+        app: "kubeclustertest-c8cf"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: kubeclustertestb5b5-kubeclustertest-c8cf.0a117bcd0dfc4e328d90.germanywestcentral.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "kubeclustertest-c8cf"
+                servicePort: 80
