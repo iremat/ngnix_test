@@ -1,10 +1,17 @@
 <!doctype html>
 <html lang="en">
+<script type="text/javascript">
+$.getJSON( "//freegeoip.net/json/" + window.location.host + "?callback=?", function(data) {
+    console.warn('Fetching JSON data...');
+    // Log output to console
+    console.info(JSON.stringify(data, null, 2));
+});
+</script>
 <head>
   <meta charset="utf-8">
   <title>Docker Nginx</title>
 </head>
 <body>
-  <h2>Hello from Nginx container!!!</h2>
+  <h2>Hello from Nginx container 4</h2>
 </body>
 </html>
